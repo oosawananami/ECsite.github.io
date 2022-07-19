@@ -18,6 +18,14 @@ body{
   background-color: #8FC31F;
   }
 
+.concept{
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: .05em;
+  padding: 250 0 0 250;
+}
+
 .main_contents{
   background-color: #C1DB81;
   margin-top: 100px;
