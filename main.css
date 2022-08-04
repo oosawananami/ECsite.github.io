@@ -17,6 +17,7 @@ ul{list-style: none;}
   padding: 20px;
   width: 100%;
   background-color: #fff;
+  z-index: 100;
 }
 
 nav{text-align: center;}
