@@ -11,6 +11,11 @@ body{
   margin: 0;
 }
 
+header{
+  position: fixed;
+  margin-top: 20px;
+}
+
 nav{
   text-align: center;
 }
@@ -21,7 +26,11 @@ nav ul li{
 
 nav ul li::after{
   content:"/";
-  
+  padding-left: 10px;
+}
+
+nav ul li:last-child::after {
+    content: ""; /* 最後のli要素の「/」をなくす */
 }
 
 .main_visual{
