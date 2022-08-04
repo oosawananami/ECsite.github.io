@@ -11,6 +11,19 @@ body{
   margin: 0;
 }
 
+nav{
+  text-align: center;
+}
+
+nav ul li{
+  display: inline;
+}
+
+nav ul li::after{
+  content:"/";
+  
+}
+
 .main_visual{
   height: 80vh;
   text-align: center;
@@ -36,14 +49,14 @@ body{
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
-  padding: 10 50 10 50;
+  padding: 10px 50px 10px 50px;
 }
 
 .content_wrap{
   background-color: #ffffff;
   width: calc((100% - 100px) /3);
   height: auto;
-  margin: 5 5 5 5;
+  margin: 5px 5px 5px 5px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -56,7 +69,7 @@ body{
 }
 
 .item_img{
-  padding: 10 10 10 10;
+  padding: 10px 10px 10px 10px;
   text-align: center;
 }
 
