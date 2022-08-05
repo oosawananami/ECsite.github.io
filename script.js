@@ -6,7 +6,9 @@ $(function(){
   console.log(price);
 });
 
+var add = $('#addcart')
 
-$('#addcart').on('click',function (){
+add.on('click',function (){
+  event.preventDefault();　//リンクイベントを無効化
   alert("カートに追加しました");
 });

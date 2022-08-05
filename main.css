@@ -115,3 +115,12 @@ footer{
   margin-top: 0;
   margin-bottom: 10;
 }
+
+#addcart{
+  z-index: 2;
+  background-color: #00d1b2;
+  border: none;
+  padding: 5px 10px;
+  position: relative;
+  margin-left: 25%;
+}
