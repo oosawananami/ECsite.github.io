@@ -12,7 +12,7 @@ ul{list-style: none;}
   padding: 0px;
 }
 
-#header{
+header{
   position: fixed;
   padding: 20px;
   width: 100%;
