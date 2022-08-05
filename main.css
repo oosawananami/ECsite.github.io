@@ -12,6 +12,7 @@ ul{list-style: none;}
   padding: 0px;
 }
 
+/*** ヘッダーstart ***/
 header{
   position: fixed;
   padding: 20px;
@@ -35,6 +36,16 @@ nav ul li::after{
 nav ul li:last-child::after {
     content: ""; /* 最後のli要素の「/」をなくす */
 }
+
+/*** ヘッダーend ***/
+
+/*** フッターstart ***/
+footer{
+  width:100%;
+  backgroung-color: #fff;
+}
+
+/*** フッターend ***/
 
 .main_visual{
   height: 80vh;
