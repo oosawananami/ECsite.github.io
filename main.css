@@ -85,7 +85,7 @@ footer{
   flex-direction: column;
 }
 
-.content_wrap:hover :not(#addcart:hover){
+.content_wrap:hover :not(#addcart:hover) :not(#addcart){
   opacity: 0.7;
   filter: brightness(110%);
   cursor: pointer;
