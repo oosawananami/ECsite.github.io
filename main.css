@@ -124,3 +124,7 @@ footer{
   position: relative;
   margin-left: 25%;
 }
+
+#addcart:hover{
+  opacity: 1;
+}
