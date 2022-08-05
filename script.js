@@ -7,6 +7,6 @@ $(function(){
 });
 
 
-$(#addcart).on('click',function (){
+$('#addcart').on('click',function (){
   alert("カートに追加しました");
 });
