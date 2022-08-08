@@ -1,16 +1,46 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <title>ECサイト_商品ページ</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="detail.css">
 </head>
 <body>
   <header><!-- ここにヘッダー --></header>
-　
-  
-  
+
+  <section id="product_detail">
+    <div class="product_wrap">
+      <div class="img_cover">
+        <p class="product_img"><img src="./img/istockphoto-1042960652-612x612.jpg"></p>
+      </div>
+      <div class="txt_cover">
+        <p class="product_name">商品名</p>
+        <p class="product_explanation">
+          ここに商品説明が入ります。</br>
+          植物なら栽培時期やセット内容など</br>
+        </p>
+        <p class="producut_price">\1,000</p>
+
+        <p class="count">
+          <span class="kosuu">個数</span>
+          <span class="sentaku">
+            <a class="minus"><span>-</span></a>
+            <input class="quantity" type="text" value="1" size="2">
+            <a class="plus"><span>+</span>
+          </span>
+        </p>
+
+        <button class="add_cart" name="add" type="submit">カートに追加する</button>
+      </div>
+  </div>
+  </section>
+
+
+
   <footer><!-- ここにフッター --></footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="script.js"  type="text/javascript"></script>
 </body>
+</html>

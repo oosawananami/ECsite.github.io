@@ -80,6 +80,7 @@ footer{
   width: calc((100% - 100px) /3);
   height: auto;
   margin: 5px 5px 5px 5px;
+  padding-bottom: 5px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
