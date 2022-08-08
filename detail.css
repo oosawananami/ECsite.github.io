@@ -2,11 +2,12 @@
 
 /*** 商品ページ ***/
 .product_wrap{
+  height: 80%;
   display: flex;
   position: relative;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 80px 80px 0px 80px;
+  padding: 80px;
 }
 
 .img_cover{
@@ -34,10 +35,14 @@
 }
 
 .kosuu{padding-right: 148px;}
-.sentaku{text-align: right;}
+/* .sentaku{text-align: right;} */
 
-.quantity{
+#quantity{
   text-align: center;
+}
+
+.minus:hover, .plus:hover{
+  cursor: pointer;
 }
 
 .add_cart{
@@ -46,5 +51,5 @@
   font-size: 1.2em;
   background-color: #ccb333;
   padding: 15px 60px;
-
+  cursor: pointer;
 }

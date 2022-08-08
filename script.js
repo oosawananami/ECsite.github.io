@@ -1,14 +1,24 @@
+const test = document.getElementById("quantity");
+
 $(function(){
   $("header").load("header.html");
   $("footer").load("footer.html");
-  // alert("描画完了");
-  const price =  $('p').data(price);
-  console.log(price);
 });
 
-var add = $('#addcart')
+$('#plus').on('click',function(){
+  test.value++
+});
 
+$('#minus').on('click',function(){
+  if(test.value >= 2){
+    test.value--
+  }else{
+    test.value = 1;
+  }
+});
+
+
+var add = $('.add_cart')
 add.on('click',function (){
-  event.preventDefault();　//リンクイベントを無効化
   alert("カートに追加しました");
 });
