@@ -12,6 +12,8 @@ ul{list-style: none;}
   padding: 0px;
 }
 
+.fa{font-family: FontAwesome;}
+
 /*** ヘッダーstart ***/
 header{
   position: fixed;
