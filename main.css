@@ -12,7 +12,10 @@ ul{list-style: none;}
   padding: 0px;
 }
 
-.fa{font-family: FontAwesome;}
+.fa{
+  font-family: FontAwesome;
+  padding-right: 10px;
+}
 
 /*** ヘッダーstart ***/
 header{
@@ -28,7 +31,7 @@ nav{text-align: center;}
 
 nav ul li{
   display: inline-block;
-  width: 10%;
+  width: 20%;
 }
 
 nav ul li::after{
