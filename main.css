@@ -19,6 +19,7 @@ header{
   width: 100%;
   background-color: #fff;
   z-index: 100;
+  top: 0;
 }
 
 nav{text-align: center;}
@@ -55,8 +56,8 @@ footer{
   background-size: cover;
   background-position: 0% 82%;
   text-align: center;
-  margin:8 0 8 0;
   background-color: #8FC31F;
+  margin: 53px 0px;
   }
 
 .concept{
@@ -69,7 +70,7 @@ footer{
 
 .main_contents{
   background-color: #C1DB81;
-  margin-top: 100px;
+  padding-top: 20px;
 }
 
 .items{
