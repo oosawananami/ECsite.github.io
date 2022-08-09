@@ -48,7 +48,12 @@ footer{
 /*** フッターend ***/
 
 .main_visual{
-  height: 80vh;
+  height: 85vh;
+  content:" ";
+  background-image: url('./img/pots-g383e2b938_1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 82%;
   text-align: center;
   margin:8 0 8 0;
   background-color: #8FC31F;
