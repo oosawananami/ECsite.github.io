@@ -97,9 +97,13 @@ footer{
   flex-direction: column;
 }
 
-.content_wrap:hover .item_img{
+.item_img:hover{
   opacity: 0.7;
   filter: brightness(110%);
+  cursor: pointer;
+}
+
+.content_wrap:hover{
   cursor: pointer;
 }
 
