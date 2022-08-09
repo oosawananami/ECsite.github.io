@@ -22,3 +22,8 @@ var add = $('.add_cart')
 add.on('click',function (){
   alert("カートに追加しました");
 });
+
+var like = $('.add_like')
+like.on('click',function(){
+  alert("お気に入り");
+});
