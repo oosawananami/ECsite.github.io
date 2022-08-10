@@ -31,6 +31,7 @@ $('#minus').on('click',function(){
 var add = $('.add_cart')
 add.on('click',function (){
   alert("カートに追加しました");
+
 });
 
 //お気に入りに追加

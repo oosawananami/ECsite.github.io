@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/*** カートページ ***/
+#your_cart{
+  margin-top: 100px;
+}
+
+.cart_title{
+  font-size: 1.5em;
+  padding: 20px;
+  text-align: center;
+}
+
+.cart_wrap{
+  box-sizing: border-box;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #a9a9a9;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.cart_item_img{
+  height: 100px;
+  width: auto;
+  margin-right: 30px;
+}
+img{
+  height: 100%;
+  width:  100%;
+}
+
+.cart_content{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cart_goods{
+  width: 300px;
+}
+
+.cart_total_money{
+  width: 200px;
+}
+.cart_total_money p{
+  padding: 6px;
+}
+.sentaku{
+  margin-left: 50px;
+}
+
+
+.remove_item{
+  border: none;
+  color: #a9a9a9;
+  font-size: 0.8em;
+  background-color: #fff;
+  padding: 5px 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+}

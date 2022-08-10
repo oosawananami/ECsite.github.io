@@ -4,12 +4,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ECサイト_タニク 買い物かご</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="cart.css">
+  <link rel="stylesheet" type="text/css" href="detail.css">
+  <link rel="stylesheet" type="text/css" href="your_cart.css">
   <script src="https://kit.fontawesome.com/30ea6de39e.js" crossorigin="anonymous"></script><!-- fontawesome -->
 </head>
 <body>
   <header><!-- ここにヘッダー --></header>
-　
+  <section id="your_cart">
+    <div class="cart_title">カート</div>
+
+    <div class="cart_wrap">
+      <p class="cart_item_img"><img src="./img/istockphoto-1042960652-612x612.jpg"></p>
+
+      <div class="cart_content">
+        <div class="cart_goods">
+          <p class="cart_item_name">商品名</p>
+          <p class="cart_item_price">単価</p>
+        </div>
+
+        <div class="cart_total_money">
+          <p class="cart_item_num">数量
+            <span class="sentaku">
+              <input id="minus" type="button" value="-">
+              <input id="quantity" type="text" value="1" size="2" min="0">
+              <input id="plus" type="button" value="+">
+            </span>
+          </p>
+          <p class="cart_item_subtotal">小計:</p>
+          <button class="remove_item" type="button">削除</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
   <footer><!-- ここにフッター --></footer>
