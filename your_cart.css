@@ -67,3 +67,26 @@ img{
   width: 100%;
   text-align: right;
 }
+
+#perchase_btn{
+  box-sizing: border-box;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+
+#perchase_btn p{
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.perchase{
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #9acd32;
+}

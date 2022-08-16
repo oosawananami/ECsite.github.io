@@ -26,15 +26,20 @@
           <p class="cart_item_num">数量
             <span class="sentaku">
               <input id="minus" type="button" value="-">
-              <input id="quantity" type="text" value="1" size="2" min="0">
+              <input id="quantity" type="text" size="2" min="0">
               <input id="plus" type="button" value="+">
             </span>
           </p>
-          <p class="cart_item_subtotal">小計:</p>
+          <p>小計:\<span class="cart_item_subtotal"></p>
           <button class="remove_item" type="button">削除</button>
         </div>
       </div>
 
+    </div>
+
+    <div id="perchase_btn">
+      <p>合計：\<span class="total"></p>
+      <button class="perchase" type="button">購入する</button>
     </div>
   </section>
 
@@ -43,4 +48,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="script.js"  type="text/javascript"></script>
+  <script src="shop.js"  type="text/javascript"></script>
+  <script src="your_cart.js"  type="text/javascript"></script>
 </body>
