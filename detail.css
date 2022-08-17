@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 /*** 商品ページ ***/
+
+#product_detail{
+      top: 60px;
+      position: relative;
+      box-sizing: border-box;}
+
 .product_wrap{
   height: 80%;
   display: flex;

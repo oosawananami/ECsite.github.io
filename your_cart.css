@@ -2,7 +2,8 @@
 
 /*** カートページ ***/
 #your_cart{
-  margin-top: 100px;
+  top: 60px;
+  position: relative;
 }
 
 .cart_title{
