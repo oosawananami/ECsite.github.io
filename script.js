@@ -7,6 +7,7 @@ $(function(){
 $('.content_wrap').on('click',function(){
   const i_name = $(this).data('name');
   const i_price = $(this).data('price');
+  const i_img = $(this).data('img');
 
-  window.location.href = 'shop.html' + "?name=" + i_name + "&price=" + i_price ;
+  window.location.href = 'shop.html' + "?name=" + i_name + "&price=" + i_price + "&img=" + i_img;
 });

@@ -14,6 +14,12 @@ $(function(){
   const prm_price = (String(param2)).split("=");
   $('.producut_price').text(prm_price[1]);
 
+  //3つ目のパラメータ―（画像）を取得
+  const param3 = (String(param.split('&')[2]));
+
+  const prm_img = (String(param3)).split("=");
+  $('.p_img').attr("src",prm_img[1]);
+
 //商品の購入個数選択start
 const qtest = $('#quantity')
 const quantity = qtest.get(0);
@@ -44,6 +50,10 @@ add.on('click',function (){
 
   //購入数
   localStorage.setItem('buy_num',qtest.val());
+
+  //商品画像
+  localStorage.setItem('buy_img',prm_img[1]);
+
   alert("カートに追加しました。");
 });
 
