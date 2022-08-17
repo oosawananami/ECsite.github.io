@@ -20,53 +20,52 @@ $(function(){
   const prm_img = (String(param3)).split("=");
   $('.p_img').attr("src",prm_img[1]);
 
-//商品の購入個数選択start
-const qtest = $('#quantity')
-const quantity = qtest.get(0);
-$('#plus').on('click',function(){
-  var sum = 1;
-  sum = quantity.value++;
-});
+  //商品の購入個数選択start
+  const qtest = $('#quantity')
+  const quantity = qtest.get(0);
+  $('#plus').on('click',function(){
+    var sum = 1;
+    sum = quantity.value++;
+  });
 
-$('#minus').on('click',function(){
-  if(quantity.value >= 2){
-    quantity.value--
-  }else{
-    quantity.value = 1;
-  }
-});
-//商品の購入個数選択end
-
-
-//カートに追加
-var add = $('.add_cart')
-add.on('click',function (){
-  //商品の情報をローカルストレージに保存する
-  //商品名
-  localStorage.setItem('buy_name',prm_txt[1]);
-
-  //商品単価
-  localStorage.setItem('buy_price',prm_price[1]);
-
-  //購入数
-  localStorage.setItem('buy_num',qtest.val());
-
-  //商品画像
-  localStorage.setItem('buy_img',prm_img[1]);
-
-  alert("カートに追加しました。");
-});
-
-//お気に入りに追加
-var like = $('.add_like')
-like.on('click',function(){
-  alert("お気に入り");
-
-  //商品の情報をローカルストレージに保存する
-  //商品名
-});
+  $('#minus').on('click',function(){
+    if(quantity.value >= 2){
+      quantity.value--
+    }else{
+      quantity.value = 1;
+    }
+  });
+  //商品の購入個数選択end
 
 
+  //カートに追加
+  var add = $('.add_cart')
+  add.on('click',function (){
+    //商品の情報をローカルストレージに保存する
+    localStorage.setItem('buy_name',prm_txt[1]);//商品名
+    localStorage.setItem('buy_price',prm_price[1]);//商品単価
+    localStorage.setItem('buy_num',qtest.val());//購入数
+    localStorage.setItem('buy_img',prm_img[1]);//商品画像
 
+    alert("カートに追加しました。");
+  });
+
+  //お気に入りに追加
+  var like = $('.add_like')
+  like.on('click',function(){
+    if($(this).hasClass('change')){
+      $(this).removeClass('change');
+
+      localStorage.removeItem('like_name',prm_txt[1]);//商品名
+      localStorage.removeItem('like_price',prm_price[1]);//商品単価
+      localStorage.removeItem('like_img',prm_img[1]);//商品画像
+    }else{
+      $(this).addClass('change');
+
+      localStorage.setItem('like_name',prm_txt[1]);//商品名
+      localStorage.setItem('like_price',prm_price[1]);//商品単価
+      localStorage.setItem('like_img',prm_img[1]);//商品画像
+    }
+  });
 
 });

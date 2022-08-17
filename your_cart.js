@@ -9,15 +9,14 @@ $(function(){
   const sum = Number(money) * Number(num);
 
   //カートに商品が入っているか判定
-  var length = localStorage.length;
-  if(length == 0){
+  if(itemname == null){
     $('.cart_wrap').hide();
     $('.cart_0').show();
 
     $('.total').text(0);
   }else{
     $('.cart_0').hide();
-    
+
     $('.cart_item_name').text(itemname);
     $('.cart_item_price').text(itemprice);
     $('.c_img').attr("src",img);
@@ -63,13 +62,17 @@ $(function(){
 
   //購入ボタン押下
   $('.perchase').on('click',function(){
-    alert("ご購入ありがとうございました！！！");
+    if(itemname == null){
+      alert("カートが空です");
+    }else{
+      alert("ご購入ありがとうございました！！！");
 
-    localStorage.removeItem('buy_name');
-    localStorage.removeItem('buy_price');
-    localStorage.removeItem('buy_num');
-    localStorage.removeItem('buy_img');
-    window.location.reload();
+      localStorage.removeItem('buy_name');
+      localStorage.removeItem('buy_price');
+      localStorage.removeItem('buy_num');
+      localStorage.removeItem('buy_img');
+      window.location.reload();
+    }
   });
 
 

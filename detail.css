@@ -86,3 +86,14 @@
   background-image: url('./icon/Heart_White.svg');
   background-repeat: no-repeat;
 }
+
+.change::before{
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  width: 23px;
+  height: 23px;
+  background-image: url('./icon/Heart_black.svg');
+  background-repeat: no-repeat;
+}

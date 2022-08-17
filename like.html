@@ -2,15 +2,40 @@
 <head>
   <meta charset="utf-8">
   <title>ECサイト_お気に入り</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="detail.css">
+  <link rel="stylesheet" type="text/css" href="your_cart.css">
+  <script src="https://kit.fontawesome.com/30ea6de39e.js" crossorigin="anonymous"></script><!-- fontawesome -->
 </head>
 <body>
   <header><!-- ここにヘッダー --></header>
-　
 
+  <section id="your_like">
+    <div class="like_title">お気に入り</div>
+
+    <div class="okini_wrap">
+        <p class="okini_img"><img class="o_img"></p>
+      <div class="okini_content">
+        <div class="goods">
+          <p class="okini_name"></p><img class="heart" src="./icon/Heart_black.svg">
+          <p class="okini_price"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="okini_0">
+      お気に入りがありません
+    </div>
+    <div class="back_top">
+      <a href="index.html#main_contents" class="modoru">お買い物を続ける</a>
+    </div>
+
+  </section>
 
   <footer><!-- ここにフッター --></footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="script.js"  type="text/javascript"></script>
+  <script src="like.js"  type="text/javascript"></script>
+
 </body>

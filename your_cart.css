@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 /*** カートページ ***/
-#your_cart{
+#your_cart,#your_like{
   top: 60px;
   position: relative;
 }
 
-.cart_title{
+.cart_title,.like_title{
   font-size: 1.5em;
   padding: 20px;
   text-align: center;
 }
 
-.cart_wrap,.cart_0{
+.cart_wrap,.cart_0,.okini_wrap,.okini_0{
   box-sizing: border-box;
   width: 60%;
   margin-left: auto;
@@ -26,7 +26,7 @@
   border-bottom: 1px solid #a9a9a9;
 }
 
-.cart_item_img{
+.cart_item_img,.okini_img{
   height: 100px;
   width: auto;
   margin-right: 30px;
@@ -36,14 +36,14 @@ img{
   width:  100%;
 }
 
-.cart_content{
+.cart_content,.okini_content{
   display: flex;
   position: relative;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.cart_goods{
+.goods{
   width: 300px;
 }
 
@@ -108,4 +108,13 @@ img{
   border: solid 0.1em #a9a9a9;
   position: relative;
   top: 25px;
+}
+
+.heart{
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  width: 16px;
+  height: 16px;
+  border-style: none;
 }
