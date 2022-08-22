@@ -39,20 +39,18 @@ $(function(){
 }
 
     //合計計算
-
     $('.total').text();
-
   }
   //ここまでが画面表示時の挙動
 
   //小計金額更新
-  $('#plus').on('click',function(){
-    const plus = $('#quantity').val();
+  $('.plus').on('click',function(){
+    const plus = $('.quantity').val();
   $('.cart_item_subtotal').text(Number(money) * Number(plus));
 });
 
-  $('#minus').on('click',function(){
-    const minus = $('#quantity').val();
+  $('.minus').on('click',function(){
+    const minus = $('.quantity').val();
   $('.cart_item_subtotal').text(Number(money) * Number(minus));
 });
 
@@ -71,8 +69,12 @@ $(function(){
       const aaa = $('.remove_item').index(this);//何番目かの確認
       item.splice(aaa,1);//配列から削除
 
-      const setjson = JSON.stringify(item); // JSON形式に変換
-      localStorage.setItem('buy',setjson);//ローカルストレージに再度保存
+      if(item.length !== 0){
+        const setjson = JSON.stringify(item); // JSON形式に変換
+        localStorage.setItem('buy',setjson);//ローカルストレージに再度保存
+      }else{
+        localStorage.clear();
+      }
     }
     window.location.reload();
   });
