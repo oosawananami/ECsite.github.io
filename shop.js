@@ -21,14 +21,14 @@ $(function(){
   $('.p_img').attr("src",prm_img[1]);
 
   //商品の購入個数選択start
-  const qtest = $('#quantity')
+  const qtest = $('.quantity')
   const quantity = qtest.get(0);
-  $('#plus').on('click',function(){
+  $('.plus').on('click',function(){
     var sum = 1;
     sum = quantity.value++;
   });
 
-  $('#minus').on('click',function(){
+  $('.minus').on('click',function(){
     if(quantity.value >= 2){
       quantity.value--
     }else{
@@ -42,10 +42,22 @@ $(function(){
   var add = $('.add_cart')
   add.on('click',function (){
     //商品の情報をローカルストレージに保存する
-    localStorage.setItem('buy_name',prm_txt[1]);//商品名
-    localStorage.setItem('buy_price',prm_price[1]);//商品単価
-    localStorage.setItem('buy_num',qtest.val());//購入数
-    localStorage.setItem('buy_img',prm_img[1]);//商品画像
+    var getjson = localStorage.getItem('buy');
+    var cart_list = JSON.parse(getjson); //JSON文字列取得
+
+    if(cart_list == null){
+      //カートが空の時
+      list = [] //新しい配列を作る
+      var list = [{"name":prm_txt[1], "data":prm_price[1], "img":prm_img[1], "num":qtest.val()}] ;//値を入れる
+      var setjson = JSON.stringify(list); //JSON形式に変換
+      localStorage.setItem('buy',setjson);
+    }else{
+      //既にカートに商品があるとき
+      var add = {"name":prm_txt[1], "data":prm_price[1], "img":prm_img[1], "num":qtest.val()} ;//値を入れる
+      cart_list.push(add);  //配列に追加
+      var setjson = JSON.stringify(cart_list);
+      localStorage.setItem('buy',setjson);
+    }
 
     alert("カートに追加しました。");
   });

@@ -1,15 +1,9 @@
 $(function(){
-  var itemname = localStorage.getItem('buy_name');
-  var itemprice = localStorage.getItem('buy_price');
-  var num = localStorage.getItem('buy_num');
-  var img = localStorage.getItem('buy_img');
-
-  //小計計算
-  const money = (String(itemprice)).split("\\")[1];
-  const sum = Number(money) * Number(num);
+  var getjson = localStorage.getItem('buy');
+  var item = JSON.parse(getjson); //JSON文字列取得
 
   //カートに商品が入っているか判定
-  if(itemname == null){
+  if(item == null){
     $('.cart_wrap').hide();
     $('.cart_0').show();
 
@@ -17,14 +11,37 @@ $(function(){
   }else{
     $('.cart_0').hide();
 
-    $('.cart_item_name').text(itemname);
-    $('.cart_item_price').text(itemprice);
-    $('.c_img').attr("src",img);
-    $('#quantity').val(Number(num));
-    //小計
-    $('.cart_item_subtotal').text(sum);
+    for(var i = 0; i < item.length; i++){
+      console.log(item[i]);
+      var cw = $('.cart_wrap.'+ String(i-1))
+
+      if(i >= 1){ //データ量が増えたら要素を複製する
+        cw.clone(true).removeClass(String(i-1)).addClass(String(i)).insertAfter(cw);
+      }
+      //それぞれの要素のi番目にクラスを追加
+      $('.cart_item_name').eq(i).addClass(String(i));
+      $('.cart_item_price').eq(i).addClass(String(i));
+      $('.c_img').eq(i).addClass(String(i));
+      $('.quantity').eq(i).addClass(String(i));
+      $('.cart_item_subtotal').eq(i).addClass(String(i));
+
+      //選択した商品のデータをあてる
+      $('.cart_item_name.' + String(i)).text(item[i].name);
+      $('.cart_item_price.' + String(i)).text(item[i].data);
+      $('.c_img.' + String(i)).attr("src",item[i].img);
+      $('.quantity.' + String(i)).val(Number(item[i].num));
+
+      //小計計算
+      const money = item[i].data.split("\\")[1];
+      const sum = Number(money) * Number(item[i].num);
+
+      $('.cart_item_subtotal.' + String(i)).text(sum);
+}
+
     //合計計算
-    $('.total').text(sum);
+
+    $('.total').text();
+
   }
   //ここまでが画面表示時の挙動
 
@@ -51,26 +68,23 @@ $(function(){
     if(!confirm('この商品をカートから削除してもよろしいですか？')){
       return false;
     }else{
-      // localStorage.clear(); ←すべてクリアしたいとき
-      localStorage.removeItem('buy_name');
-      localStorage.removeItem('buy_price');
-      localStorage.removeItem('buy_num');
-      localStorage.removeItem('buy_img');
+      const aaa = $('.remove_item').index(this);//何番目かの確認
+      item.splice(aaa,1);//配列から削除
+
+      const setjson = JSON.stringify(item); // JSON形式に変換
+      localStorage.setItem('buy',setjson);//ローカルストレージに再度保存
     }
     window.location.reload();
   });
 
   //購入ボタン押下
   $('.perchase').on('click',function(){
-    if(itemname == null){
+    if(item == null){
       alert("カートが空です");
     }else{
       alert("ご購入ありがとうございました！！！");
 
-      localStorage.removeItem('buy_name');
-      localStorage.removeItem('buy_price');
-      localStorage.removeItem('buy_num');
-      localStorage.removeItem('buy_img');
+      localStorage.clear();
       window.location.reload();
     }
   });
